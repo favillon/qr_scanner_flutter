@@ -6,8 +6,10 @@ import 'package:qr_scanner/pages/address_page.dart';
 import 'package:qr_scanner/pages/maps_page.dart';
 import 'package:qr_scanner/provider/scan_list_provider.dart';
 import 'package:qr_scanner/provider/ui_provider.dart';
+import 'package:qr_scanner/share_preferences/preferences.dart';
 import 'package:qr_scanner/widgets/custom_navigator_bar.dart';
 import 'package:qr_scanner/widgets/scan_button.dart';
+import 'package:qr_scanner/widgets/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
    
@@ -17,7 +19,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('History'),
+        title: Text('History of ${ Preferences.name }' ),
         actions: [
           IconButton(onPressed:() {
             Provider.of<ScanListProvider>(context, listen: false).deleteAll();
@@ -25,6 +27,7 @@ class HomeScreen extends StatelessWidget {
           icon: const Icon(Icons.delete_forever_outlined))
         ],
       ),
+      drawer: const SideMenu(),
       body: _HomeBody(),
       bottomNavigationBar:  const CustomNavigationBar(),
       floatingActionButton: const ScanButtom(),
