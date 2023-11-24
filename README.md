@@ -20,3 +20,20 @@ Read code QR for History
 
 ### Open Geo
 ![Open Geo](./img/open_geo.png) 
+
+
+## Views App Update
+
+Read code QR for History and Preferences
+
+### Home Preference
+![Home](./img/home_with_preference.png) 
+
+### Page Preferences
+![Page Preferences](./img/preferences.png) 
+
+### Darwer
+![Darwer](./img/darwer.png)
+
+### Darwer Two Option
+![Darwer](./img/darwer_two.png) 
